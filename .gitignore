@@ -1,0 +1,28 @@
+# https://git-scm.com/docs/gitignore
+# https://help.github.com/articles/ignoring-files
+# Example .gitignore files: https://github.com/github/gitignore
+/bower_components/
+/node_modules/
+/xmlrpc.php
+/wp-trackback.php
+/wp-signup.php
+/wp-settings.php
+/wp-mail.php
+/wp-login.php
+/wp-load.php
+/wp-links-opml.php
+/wp-cron.php
+/wp-config.php
+/wp-comments-post.php
+/wp-blog-header.php
+/wp-activate.php
+/license.txt
+/.htaccess
+/wp-admin/
+/wp-includes/
+/wp-content/themes/twentyfifteen/
+/wp-content/themes/twentyfourteen/
+/wp-content/themes/twentysixteen/
+/readme.html
+/wp-content/themes/omnifoods/assets/css/font-awesome/
+/wp-content/themes/omnifoods/assets/css/ionicons-2.0.1/
