@@ -38,7 +38,7 @@
 					<span><?php echo $counter ?></span>
 					<p><?php the_field('instructions'); ?></p>
 				</div>
-			<?php endwhile; ?>
+			<?php endwhile; wp_reset_query(); ?>
 
 				<a href="#" class="btn-app"><img src="<?php bloginfo( 'stylesheet_directory' )?>/assets/images/download-app-android.png" alt="Google Play"></a>
 				<a href="#" class="btn-app"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/download-app.svg" alt="Apple Store"></a>

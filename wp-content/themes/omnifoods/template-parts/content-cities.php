@@ -1,76 +1,43 @@
 <section id="cities">
 	<div class="container">
-		<div class="section_header">
-			<h2>We&#39;re currently in these cities</h2>
+	<div class="section_header">
+
+		 <?php if(!empty(get_field('city_icon'))) : ?>
+				<i class="<?php echo get_field('city_icon'); ?> section_icon"></i>
+		 <?php endif; ?>
+
+			 <h2><?php echo get_field('city_header'); ?></h2>
+
+		 <?php if(!empty(get_field('city_description'))) : ?>
+				<p class="section_intro_text"><?php echo get_field('city_description'); ?></p>
+		 <?php endif; ?>
+
 		</div>
+
 		<div class="row">
+		<?php $loop = new Wp_Query( array('post_type' => 'cities', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
+
+		<?php while($loop->have_posts()) : $loop->the_post(); $image = get_field('city_image'); ?>
+
 				<div class="col-sm-3">
-					<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/lisbon-3.jpg" alt="Lisbon">
-					<h3>Lisbon</h3>
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<h3><?php the_field('city_name'); ?></h3>
 					<div class="city-feature">
-						<i class="ion-ios-people-outline icon-small"></i>
-                        1600+ happy eaters
+						<i class="<?php the_field('benefit_icon1'); ?> icon-small"></i>
+                        <?php the_field('city_benefit1'); ?>
 					</div>
 					<div class="city-feature">
-						<i class="ion-android-restaurant icon-small"></i>
-                        60+ top chefs
+						<i class="<?php the_field('benefit_icon2'); ?> icon-small"></i>
+                        <?php the_field('city_benefit2'); ?>
 					</div>
 					<div class="city-feature">
-						<i class="ion-social-twitter-outline icon-small"></i>
-                        <a href="#" class="fmt-links">@omnifood_lx</a>
+						<i class="<?php the_field('media_icon'); ?> icon-small"></i>
+                        <a href="#" class="fmt-links"><?php the_field('media_url'); ?></a>
 					</div>
 				</div>
 
-				<div class="col-sm-3">
-					<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/san-francisco.jpg" alt="San Francisco">
-					<h3>San Francisco</h3>
-					<div class="city-feature">
-						<i class="ion-ios-people-outline icon-small"></i>
-                        3700+ happy eaters
-					</div>
-					<div class="city-feature">
-						<i class="ion-android-restaurant icon-small"></i>
-                        160+ top chefs
-					</div>
-					<div class="city-feature">
-						<i class="ion-social-twitter-outline icon-small"></i>
-                        <a href="#" class="fmt-links">@omnifood_lx</a>
-					</div>
-				</div>
+		<?php endwhile; wp_reset_query(); ?>
 
-				<div class="col-sm-3">
-					<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/berlin.jpg" alt="Berlin">
-					<h3>Berlin</h3>
-					<div class="city-feature">
-						<i class="ion-ios-people-outline icon-small"></i>
-                        2300+ happy eaters
-					</div>
-					<div class="city-feature">
-						<i class="ion-android-restaurant icon-small"></i>
-                        110+ top chefs
-					</div>
-					<div class="city-feature">
-						<i class="ion-social-twitter-outline icon-small"></i>
-                        <a href="#" class="fmt-links">@omnifood_lx</a>
-					</div>
-				</div>
-
-				<div class="col-sm-3">
-					<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/london.jpg" alt="London">
-					<h3>London</h3>
-					<div class="city-feature">
-						<i class="ion-ios-people-outline icon-small"></i>
-                        1200+ happy eaters
-					</div>
-					<div class="city-feature">
-						<i class="ion-android-restaurant icon-small"></i>
-                        50+ top chefs
-					</div>
-					<div class="city-feature">
-						<i class="ion-social-twitter-outline icon-small"></i>
-                        <a href="#" class="fmt-links">@omnifood_lx</a>
-					</div>
-				</div>
 			</div>
 	</div>
 </section>
