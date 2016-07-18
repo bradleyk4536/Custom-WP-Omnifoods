@@ -1,22 +1,42 @@
 <section id="testimonial">
 	<div class="container">
-			<h2>Our customers can't live without us</h2>
+		<?php if(!empty(get_field('testimonial_icon'))) : ?>
+			<i class="<?php echo get_field('testimonial_icon'); ?> section_icon"></i>
+		<?php endif; ?>
+
+			<h2><?php echo get_field('testimonial_header'); ?></h2>
+
+		<?php if(!empty(get_field('testimonial_description'))) : ?>
+			<p class="section_intro_text"><?php echo get_field('testimonial_description'); ?></p>
+		<?php endif; ?>
+
 		<div class="row">
-			<div class="col-sm-4">
-				<blockquote>Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
-					<cite><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/customer-1.jpg" alt="Alberto Duncan">Alberto Duncan</cite>
+
+	<?php
+				$loop = new WP_Query( array('post_type' => 'testimonial', 'orderby' => 'post_id', 'order' => 'ASC' ));
+			?>
+
+			<?php while( $loop->have_posts()) : $loop->the_post(); ?>
+
+				<div class="col-sm-4">
+				<cite>
+
+			<?php if(has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail(array(45, 45)); ?>
+			<?php endif; ?>
+			<?php the_title(); ?>
+
+				</cite>
+				<blockquote>
+
+			<?php the_content(); ?>
+
 				</blockquote>
+
 			</div>
-			<div class="col-sm-4">
-				<blockquote>Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood.
-					<cite><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/customer-2.jpg" alt="Joana Silva">Joana Silva</cite>
-				</blockquote>
-			</div>
-			<div class="col-sm-4">
-				<blockquote>I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
-					<cite><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/customer-3.jpg" alt="Milton Chapman">Milton Chapman</cite>
-				</blockquote>
-			</div>
+
+			<?php endwhile; wp_reset_query(); ?>
+
 		</div>
 	</div>
 </section>

@@ -564,13 +564,13 @@ blockquote:before {
 
 cite {
     font-size: 90%;
-    margin-top: 40px;
+    margin: 15px 0;
     display: block;
 
 }
 
 cite img {
-    height: 45px;
+/*    height: 45px;*/
     border-radius: 50%;
     margin-right: 10px;
     vertical-align: middle;
