@@ -12,7 +12,7 @@
 				<p class="section_intro_text"><?php echo get_field('city_description'); ?></p>
 		 <?php endif; ?>
 
-		</div>
+	</div>
 
 		<div class="row">
 		<?php $loop = new Wp_Query( array('post_type' => 'cities', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
@@ -38,6 +38,6 @@
 
 		<?php endwhile; wp_reset_postdata(); ?>
 
-			</div>
+		</div>
 	</div>
 </section>
