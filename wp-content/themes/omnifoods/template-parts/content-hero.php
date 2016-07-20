@@ -1,4 +1,13 @@
-<section id="hero" data-type="background" data-speed="5">
+<!--DYNAMIC BACKGROUND IMAGE-->
+<?php $image_url = wp_get_attachment_url( get_post_thumbnail_id( $post-> ID ) ); ?>
+
+<?php if(has_post_thumbnail()) : // CHECK FOR LOADED IMAGE IF EXISTS LOAD IT ?>
+	<section style="background-image: linear-gradient(rgba(78, 78, 78, 0.7), rgba(78, 78, 78, 0.7)), url('<?php echo $image_url; ?>'); background-size: cover; background-attachment: fixed;">
+
+<?php else : //NO LOADED IMAGE SO USE THE FALLBACK IMAGE IN ASSETS FOLDER ?>
+	<section id="hero" data-type="background" data-speed="5">
+<?php endif; ?>
+
 	<div class="container clear-fix">
 		<div class="row">
 			<div class="col-sm-5">
