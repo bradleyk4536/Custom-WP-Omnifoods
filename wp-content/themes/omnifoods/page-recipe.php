@@ -13,7 +13,7 @@
 			<div class="thumbnail">
 				<?php the_post_thumbnail(); ?>
 				<h3><?php the_title(); ?></h3>
-				<p><?php echo substr($excerpt, 0, 140); ?><a href="item_detail.php"> continue &raquo;</a></p>
+				<p><?php echo substr($excerpt, 0, 140); ?><a href="<?php echo get_permalink(); ?>"> continue &raquo;</a></p>
 			</div>
 		</article>
 	<?php endwhile; wp_reset_postdata(); ?>
