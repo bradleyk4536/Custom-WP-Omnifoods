@@ -33,7 +33,7 @@
 						<h3>Serving</h3>
 						<p>Pour the reserved marinade over the chicken, remove from the pan and arrange on serving plates. Grate over the lemon zest and scatter with the rest of the parsley. Cut the lemon into wedges and serve with the chicken.</p>
 					</div>
-				<?php endwhile; endif; ?>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
 				</article>
 				<div id="comments">
 				<div class="comments-wrap">
