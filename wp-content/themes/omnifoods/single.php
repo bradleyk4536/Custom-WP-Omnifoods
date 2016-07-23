@@ -6,5 +6,9 @@
 		case 'myrecipe':
 			include(TEMPLATEPATH . '/single-recipe.php');
 		break;
+
+		default:
+			include(TEMPLATEPATH . '/single-blog.php');
+
 	endswitch;
 ?>

@@ -226,6 +226,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	margin: 0 0 1.5em;
 }
 
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -354,7 +355,7 @@ Orange color: #e67e22
 /*GLOBAL*/
 
 body {
-	background-color: #fff;
+	background: url(assets/images/tile.jpg) top right repeat; background-color: #fff;
 	font-family: 'Lato', 'Ariel', sans-serif;
 	font-size: 20px;
 	font-weight: 300;
@@ -710,6 +711,130 @@ aside .widget ul li:hover {
 	position: relative;
 	left: 5px;
 }
+
+/*BLOG STYLES*/
+
+#blog-title {
+	color: #e67e22;
+	padding-top: 20px;
+}
+
+.post, .widget, #comments {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius:  4px;
+	margin: 0 0 40px;
+	position: relative;
+}
+
+.post header,
+.post .post-excerpt,
+.post .post-body,
+#comments .comments-wrap { padding: 20px; }
+
+.post header h1,
+.post header h3 {
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 15px;
+	padding: 0 0 15px;
+}
+
+.post header h1 { font-size: 99px; }
+.post-image { height: auto; }
+.post-details {
+	font-size: 12px;
+	width: 90%;
+}
+.post-details i.fa { padding-left: 10px; }
+.post-details i.fa:first-child {
+	padding: 0px;
+}
+
+.container div#single-post{ padding-top: 30px; }
+
+/*WIDGETS*/
+
+.widget { padding: 20px; }
+
+.widget h4 {
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.widget ul li { margin: 0 0 5px; }
+
+.widget ul li:hover {
+	position: relative;
+	left: 5px;
+}
+
+/*COMMENTS ICON*/
+.post-comments-badge {
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	border: none;
+	border-radius: 100%;
+	background: #e67e22;
+	text-align: center;
+	display: table;
+}
+
+.post-comments-badge a {
+	display: table-cell;
+	vertical-align: middle;
+	color: white;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.post-comments-badge i.fa {
+	display: block;
+	font-size: 15px;
+	padding: 0;
+	margin-bottom: 4px;
+}
+
+.post-comments-badge:hover { background-color: #a3520b; }
+
+#comments h3 { text-align: center; }
+#comments h4 { font-size: 1.3em; }
+#comments ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#comments ol li {
+	background: rgba(0, 0, 0, 0.02);
+	padding: 10px 20px;
+	margin: 10px 0;
+	border-radius: 4px;
+	border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+#comments ol li ol.children {
+	list-style: none;
+	padding: 0px;
+	font-size: 0.96em;
+}
+
+#leave-comment {
+	margin: 40px 0 0 ;
+	padding: 20px 0 0;
+	border-top: 1px solid #eee;
+
+}
+
 
 /* ----- FadeIn on Scroll----- */
 
