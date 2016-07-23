@@ -1,4 +1,4 @@
-<section id="how_it_works">
+<section id="how_it_works" class="js--wp-2">
 	<div class="container">
 		<div class="section_header">
 
@@ -19,7 +19,7 @@
 			$image = get_field('how_works_image');
 			if(!empty($image)) : ?>
 			<div class="col-sm-6 phone">
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="app-screen js--wp-2">
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="app-screen">
 			</div>
 		<?php else :?>
 				<div class="col-sm-6 phone"></div>

@@ -1,4 +1,4 @@
-<section id="cities">
+<section id="cities" class="js--wp-3">
 	<div class="container">
 	<div class="section_header">
 

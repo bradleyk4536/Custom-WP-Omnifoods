@@ -1,4 +1,4 @@
-<section id="get_food_fast" class="features js--section-features">
+<section id="get_food_fast" class="js--scroll-to-get-food-fast">
 	<div class="container">
 		<div class="section_header">
 			<?php if(!empty(get_field('section_icon'))) : ?>

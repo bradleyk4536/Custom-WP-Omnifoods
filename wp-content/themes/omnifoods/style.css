@@ -529,6 +529,8 @@ a.btn-color { color: #fff; }
 	margin-bottom: 30px;
 }
 
+
+
 /*CITIES SECTION*/
 
 #cities img { width: 250px; }
@@ -708,6 +710,34 @@ aside .widget ul li:hover {
 	position: relative;
 	left: 5px;
 }
+
+/* ----- FadeIn on Scroll----- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+
+	opacity : 0;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+.js--wp-4 {
+
+	-webkit-animation-duration: 1s;
+
+	animation-duration: 1s;
+
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+
+	opacity : 1;
+
+}
+
 
 /* MEDIA QUERIES */
 
