@@ -5,7 +5,7 @@
 	<section style="background-image: linear-gradient(rgba(78, 78, 78, 0.7), rgba(78, 78, 78, 0.7)), url('<?php echo $image_url; ?>'); background-size: cover; background-attachment: fixed;">
 
 <?php else : //NO LOADED IMAGE SO USE THE FALLBACK IMAGE IN ASSETS FOLDER ?>
-	<section id="hero" data-type="background" data-speed="5">
+	<section id="hero" data-type="background" data-speed="3">
 <?php endif; ?>
 
 	<div class="container clear-fix">

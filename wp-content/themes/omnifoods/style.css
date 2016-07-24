@@ -428,7 +428,7 @@ i.section_icon {
 #testimonial { margin-top: 45px; }
 
 #how_it_works,
-#call_to_action { background-color: #f4f4f4; }
+#call_to_action { background-color: #ededed; }
 
 /*Navigation Bar*/
 
@@ -480,7 +480,7 @@ input[type=submit]:active { background-color: #cf6d17; }
 #hero {
 	background-image: -webkit-linear-gradient(rgba(78, 78, 78, 0.7), rgba(78, 78, 78, 0.7)), url(assets/images/hero2-min.png);
 	background-image: linear-gradient(rgba(78, 78, 78, 0.7), rgba(78, 78, 78, 0.7)), url(assets/images/hero2-min.png);
-	background-size: cover;
+	background-size: contain;
 	background-attachment: fixed;
 }
 
@@ -590,7 +590,7 @@ p span { }
 	box-shadow: 0 2px 2px #efefef;
 }
 
-.plan-box div { border-bottom: 1px solid #e8e8e8; }
+.plan-box div { border-bottom: 1px solid #e8e8e8; box-shadow: 1px 1px 2px #e2e2e2}
 
 .plan-box div:first-child {
     background-color: #fcfcfc;
@@ -806,7 +806,11 @@ aside .widget ul li:hover {
 
 .post-comments-badge:hover { background-color: #a3520b; }
 
-#comments h3 { text-align: center; }
+#comments h3 {
+	text-align: center;
+	font-weight: 700;
+
+}
 #comments h4 { font-size: 1.3em; }
 #comments ol {
 	list-style: none;
@@ -834,7 +838,30 @@ aside .widget ul li:hover {
 	border-top: 1px solid #eee;
 
 }
+/* COMMENT STYLES FOR WORDPRESS */
 
+#comments footer{
+	background: none;
+	color: inherit;
+}
+
+#comments footer a{ color: inherit; }
+
+#comments .comment-metadata { margin: 10px 0 0 }
+
+textarea#comment {
+	margin: 0;
+	width: 720px;
+	height: 194px;
+}
+
+.widget-title{ font-weight: 700; }
+
+section h1.page-title {
+	color: #e67e22;
+	padding-top: 20px;
+	text-align: center;
+}
 
 /* ----- FadeIn on Scroll----- */
 
