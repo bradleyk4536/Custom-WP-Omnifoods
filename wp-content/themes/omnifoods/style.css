@@ -53,6 +53,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+/* MAKE SURE SELECTED MEMU ITEMS ARE WHITE WHEN PAGE IS SHOWN */
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a { color: white; }
 
 /* Small menu. */
 .menu-toggle,
