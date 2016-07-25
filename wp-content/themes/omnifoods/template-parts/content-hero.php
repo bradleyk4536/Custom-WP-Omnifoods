@@ -19,6 +19,7 @@
 			<h2><?php echo get_post_meta(11, 'sub_text', true) ?></h2>
 			<a href="#" class="btn btn-full js--scroll-to-plans">I&#39;m hungry</a>
 			<a href="#" class="btn btn-ghost js--scroll-to-get-food-fast">Show Me More</a>
+			<a href="#" class="btn btn-ghost" data-toggle='modal' data-target='#contact_modal'>Contact</a>
 			</div>
 		</div>
 	</div>
