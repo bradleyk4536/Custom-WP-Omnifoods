@@ -8,7 +8,7 @@
 				<h4 class="modal-title" id="myModalLabel"><i class="fa fa-envelope"></i><?php echo get_field('contact_modal_title'); ?></h4>
 			</div>
 			<div class="modal-body">
-				<p><?php echo get_field('contact_modal_message'); ?></p>
+				<p><?php echo get_field('contact_modal_message'); ?> </p>
 				<?php echo get_field('contact_modal_short_code'); ?>
 				<hr>
 					<p><small><?php echo get_field('contact_modal_statement'); ?></small></p>

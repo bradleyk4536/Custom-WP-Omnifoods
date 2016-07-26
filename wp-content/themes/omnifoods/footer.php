@@ -37,8 +37,13 @@ wp_nav_menu( array(
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-2.1.1.min.js"></script>
-    <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery.waypoints.min.js"></script>
     <script src="<?php bloginfo( 'template_directory' )?>/assets/js/bootstrap.min.js"></script>
+	 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery.waitforimages.js" type="text/javascript"></script>
+	 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery.isotope.min.js" type="text/javascript"></script>
+	 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/stellar.js" type="text/javascript"></script>
+	 <script>(function($) {$(function() {if ($('body').css('color') !== 'rgb(51, 51, 51)') {$('head').prepend('<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/css/bootstrap.min.css">');}});})(window.jQuery);</script>
+	 <script>(function($){$('body').append('<div id="check" class="fa">');var check=$('#check');if(check.css('display')!=='inline-block'){$('head').prepend('<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-awesome.min.css">');}check.remove();})(window.jQuery)</script>
+	  <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/custom-scripts.js" type="text/javascript"></script>
     <script src="<?php bloginfo( 'template_directory' )?>/assets/js/main.js"></script>
 
 </body>

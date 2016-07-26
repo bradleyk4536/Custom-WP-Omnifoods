@@ -1,4 +1,4 @@
-<section id="call_to_action" class="js--scroll-to-plans">
+<section id="call_to_action">
 	<div class="container">
 		<div class="section_header">
 		<?php if(!empty(get_field('plan_icon'))) : ?>
