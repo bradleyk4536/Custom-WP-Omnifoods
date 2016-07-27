@@ -3,8 +3,8 @@
 <section id="menu">
 <div class="container">
 <div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="min-height: 1px;">
-		<div class="jumbotron" style="margin-bottom: 10px;">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="jumbotron">
 			<h1 class="text-center">
 				<i class="<?php echo get_field('recipe_icon'); ?> "></i> <?php echo get_field('recipe_header'); ?>
 			</h1>
@@ -13,12 +13,16 @@
 </div>
 <!--DISPLAY NAVIGATION CONTROLS-->
 <div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="min-height: 1px;">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="panel panel-default text-center">
 					<div class="panel-body">
 						<div class="proj">
 							<div id="filters">
-								 <a href="#" data-filter="*" class="active btn btn-default">Show All</a> <a href="#" data-filter=".graphics" class="btn  btn-default">Graphics</a> <a href="#" data-filter=".web" class="btn  btn-default">Web</a> <a href="#" data-filter=".ui" class="btn  btn-default">UI</a> <a href="#" data-filter=".design" class="btn  btn-default">Design</a>
+								 <a href="#" data-filter="*" class="active btn btn-default">Show All</a>
+								 <a href="#" data-filter=".beef" class="btn  btn-default">Beef</a> <a href="#" data-filter=".chicken" class="btn  btn-default">Chicken</a>
+								 <a href="#" data-filter=".pizza" class="btn  btn-default">Pizza</a>
+								 <a href="#" data-filter=".dessert" class="btn  btn-default">Dessert</a>
+								 <a href="#" data-filter=".soup" class="btn  btn-default">Soup</a>
 							</div>
 						</div>
 					</div>
@@ -32,7 +36,7 @@
 		<div id="container-folio" class="relative">
 				<?php $loop = new Wp_Query(array('post_type' => 'myrecipe', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
 	<?php while($loop->have_posts()) : $loop->the_post(); $excerpt = get_the_excerpt(); ?>
-		<div class="box col-xs-6 col-md-4 col-sm-4 col-lg-4 graphics design" style="min-height: 1px;">
+		<div class="box col-xs-6 col-md-4 col-sm-4 col-lg-4 <?php echo get_field( 'menu_filter' ); ?>">
 			<div class="thumbnail">
 				<?php the_post_thumbnail(); ?>
 				<h3><?php the_title(); ?></h3>

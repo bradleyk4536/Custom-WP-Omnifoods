@@ -53,9 +53,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
+.navbar-inverse .navbar-nav > li > a:hover { color: #e67e22; }
+.navbar > .container-fluid .navbar-brand { color: #e67e22; }
+
 /* MAKE SURE SELECTED MEMU ITEMS ARE WHITE WHEN PAGE IS SHOWN */
-.navbar-nav > li.current_page_item a,
-.navbar-nav > li.current_page_parent a { color: white; }
+.navbar-nav > li.current_page_item a { color: #e67e22; }
+
+single single-myrecipe #menu-item
 
 /* Small menu. */
 .menu-toggle,
@@ -645,12 +650,19 @@ footer { background-color: #333; font-size: 80%; }
     transition: color 0.2s;
 }
 
+.copy-author {
+	color: #e67e22;
+	padding-top: 15px;
+}
+
 /*SEE OUR MENU PAGE*/
 
-.jumbotron { margin-top: 50px; color: #e67e22;}
+.jumbotron { margin: 50px 0 10px ; color: #e67e22;}
 /*#menu { background: url(../images/tile.jpg) top left repeat; }*/
 #menu .row { max-width: 1240px; margin-left: 10px; }
 .box p { font-size: 90%; }
+
+#menu .row > div { min-height: 1px; }
 
 /*ITEM DETAIL PAGE */
 

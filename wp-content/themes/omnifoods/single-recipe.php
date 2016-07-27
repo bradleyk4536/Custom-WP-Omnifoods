@@ -14,13 +14,12 @@
 						</div>
 					</div>
 
-				<?php if(!empty(get_field('header_1')) && !empty(get_field('instructor_1'))) :?>
-					<div class="ingredients">
+				<?php if(!empty(get_field('header_1')) && !empty(get_field('instruction_1'))) : ?>
+					<div class="directions">
 						<h3><?php the_field('header_1'); ?></h3>
 						<?php the_field('instruction_1'); ?>
 					</div>
 				<?php endif; ?>
-
 				<?php if(!empty(get_field('header_2')) && !empty(get_field('instruction_2'))) : ?>
 					<div class="directions">
 						<h3><?php the_field('header_2'); ?></h3>
