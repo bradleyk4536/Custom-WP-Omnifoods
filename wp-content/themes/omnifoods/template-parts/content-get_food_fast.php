@@ -35,6 +35,6 @@
 		</div><!--end row-->
 	</div><!--end container-->
 	<div class="menu_button text-center">
-		<a href="recipe" class="btn btn-info btn-lg btn-color">See our menu</a>
+		<a href="recipe" class="btn btn-ghost btn-lg btn-color">See our menu</a>
 	</div>
 </section>

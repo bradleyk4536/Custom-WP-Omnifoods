@@ -11,54 +11,71 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+<!--DYNAMIC BACKGROUND IMAGE-->
+<?php $image_url = wp_get_attachment_url( get_post_thumbnail_id( $post-> ID ) ); ?>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'omnifoods' ); ?></h1>
-				</header><!-- .page-header -->
+<?php if(has_post_thumbnail()) : // CHECK FOR LOADED IMAGE IF EXISTS LOAD IT ?>
+	<section style="background-image: linear-gradient(rgba(78, 78, 78, 0.7), rgba(78, 78, 78, 0.7)), url('<?php echo $image_url; ?>'); background-size: cover; background-attachment: fixed;">
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'omnifoods' ); ?></p>
-
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( omnifoods_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'omnifoods' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'omnifoods' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+<?php else : //NO LOADED IMAGE SO USE THE FALLBACK IMAGE IN ASSETS FOLDER ?>
+	<section error-404 not-found id="hero" data-type="background" data-speed="3">
+<?php endif; ?>
+		<div class="container clear-fix">
+			<div class="row">
+				<div class="col-sm-5">
+					<img class="hero-image img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/logo-white.png" alt="">
+				</div>
+				<div class="hero-text col-sm-7">
+	<!-- USING GENERAL SETTING TAGLINE ENTRY -->
+				<h2 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'omnifoods' ); ?></h2>
+				</div>
+			</div>
+		</div>
+	</section><!-- .error-404 -->
+	<section id="get_food_fast">
+	<div class="container">
+		<div class="section_header">
+				<h2>Don't worry be happy, lets get you back on track!</h2>
+		</div>
+		<div class="container">
+			<div class="row" id="primary">
+				<main id="content" class="col-sm-12" role="main">
+		<div class="col-sm-8">
+				<div class="error-404 not-found">
+					<div class="page-content">
+<!--					PLANS-->
+						<h3>Were you looking for a plan</h3>
+		<?php $loop = new Wp_Query( array('post_type' => 'plans', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
+		<?php while($loop->have_posts()) : $loop->the_post(); ?>
+			<div class="col-sm-4">
+				<div class="plan-box">
+				<div>
+					<h3><?php the_title(); ?></h3>
+					<p><span><?php the_field('plan_price'); ?> / <?php the_field('price_duration'); ?></span></p>
+				</div>
+				<div>
+				</div>
+				<div><a href="#" class="btn <?php the_field('call_action_button'); ?> btn-lg">Sign up now</a></div>
+				</div>
+			</div>
+		<?php endwhile; wp_reset_postdata(); ?>
+				<p>&emsp;</p>
+				<hr>
+				<h3>... or may be our popular menu</h3>
+					</div>
+<!--					MENU -->
+				<div class="widget text-center">
+					<a href="recipe" class="btn btn-ghost btn-lg">See our menu</a>
+				</div>
+				</div>
+			</div>
+<!--				SIDE BAR-->
+					<aside class="col-sm-4">
+						<?php get_sidebar(); ?>
+					</aside>
+				</main>
+			</div>
+			</div>
+		</div>
+</section>
+<?php get_footer(); ?>
