@@ -30,9 +30,18 @@
 				</div>
 				<div>
 					<ul>
+               <?php if(!empty(get_field('plan_icon_1'))) : ?>
                 <li><i class="<?php the_field('plan_icon_1'); ?> icon-small"></i><?php the_field('plan_benefit_1'); ?></li>
+               <?php endif; ?>
+
+               <?php if(!empty(get_field('plan_icon_2'))) : ?>
                 <li><i class="<?php the_field('plan_icon_2'); ?> icon-small"></i><?php the_field('plan_benefit_2'); ?></li>
+               <?php endif; ?>
+
+               <?php if(!empty(get_field('plan_icon_3'))) : ?>
                 <li><i class="<?php the_field('plan_icon_3'); ?> icon-small"></i><?php the_field('plan_benefit_3'); ?></li>
+               <?php endif; ?>
+
 <!--                ADDED EMPTY SPACE IF LAST BENEFIT IS EXCLUDED INORDER TO MAINTAIN FORMATING -->
             <?php if(!empty(get_field('plan_icon_4')) || !empty('plan_benefit_4')) : ?>
                 <li><i class="<?php the_field('plan_icon_4'); ?> icon-small"></i><?php the_field('plan_benefit_4'); ?></li>

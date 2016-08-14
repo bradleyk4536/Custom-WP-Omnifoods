@@ -27,7 +27,7 @@ get_header(); ?>
 				</div>
 				<div class="hero-text col-sm-7">
 	<!-- USING GENERAL SETTING TAGLINE ENTRY -->
-				<h2 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'omnifoods' ); ?></h2>
+				<h2 class="page-title"><?php esc_html_e( 'Oops 404! That page can&rsquo;t be found.', 'omnifoods' ); ?></h2>
 				</div>
 			</div>
 		</div>

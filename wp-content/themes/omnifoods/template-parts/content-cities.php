@@ -20,7 +20,7 @@
 		<?php while($loop->have_posts()) : $loop->the_post(); $image = get_field('city_image'); ?>
 
 				<div class="col-sm-3">
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 					<h3><?php the_field('city_name'); ?></h3>
 					<div class="city-feature">
 						<i class="<?php the_field('benefit_icon1'); ?> icon-small"></i>

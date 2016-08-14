@@ -874,7 +874,7 @@ aside .widget ul li:hover {
 
 textarea#comment {
 	margin: 0;
-	width: 720px;
+	width: 100% !important;
 	height: 194px;
 }
 
@@ -2753,13 +2753,13 @@ border-right: 3000px solid transparent;
   }
 }
 
+.hero-text a {margin-bottom: 10px}
+
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
   }
 }
-
-
 
 /*
 	DO NOT REMOVE THIS!

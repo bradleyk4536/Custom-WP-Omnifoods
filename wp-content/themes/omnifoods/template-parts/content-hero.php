@@ -10,15 +10,15 @@
 
 	<div class="container clear-fix">
 		<div class="row">
-			<div class="col-sm-5">
+			<div class="col-sm-5 visible-md visible-lg">
 				<img class="hero-image img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/logo-white.png" alt="">
 			</div>
-			<div class="hero-text col-sm-7">
+			<div class="hero-text col-md-7">
 <!-- USING GENERAL SETTING TAGLINE ENTRY -->
 			<h1><?php bloginfo( 'description' ); ?></h1>
 			<h2><?php echo get_post_meta(11, 'sub_text', true) ?></h2>
 			<a href="#" class="btn btn-full js--scroll-to-plans">I&#39;m hungry</a>
-			<a href="#" class="btn btn-ghost js--scroll-to-get-food-fast">Show Me More</a>
+<!--			<a href="#" class="btn btn-ghost js--scroll-to-get-food-fast">Show Me More</a>-->
 			<a href="#" class="btn btn-ghost" data-toggle="modal" data-target="#contact_modal">Contact Omnifoods</a>
 			</div>
 		</div>
