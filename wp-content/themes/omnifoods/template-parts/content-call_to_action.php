@@ -16,7 +16,7 @@
 
 		<?php $loop = new Wp_Query( array('post_type' => 'plans', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
 		<?php while($loop->have_posts()) : $loop->the_post(); ?>
-			<div class="col-sm-4">
+			<div class="col-sm-6 col-md-4 col-lg-4">
 				<div class="plan-box">
 				<div>
 					<h3><?php the_title(); ?></h3>

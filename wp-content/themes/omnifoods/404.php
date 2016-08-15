@@ -22,7 +22,7 @@ get_header(); ?>
 <?php endif; ?>
 		<div class="container clear-fix">
 			<div class="row">
-				<div class="col-sm-5">
+				<div class="col-sm-5 visible-md visible-lg">
 					<img class="hero-image img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/images/logo-white.png" alt="">
 				</div>
 				<div class="hero-text col-sm-7">
