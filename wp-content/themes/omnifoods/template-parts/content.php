@@ -30,7 +30,7 @@
 
 								<!--			DISPLAY THE TAGS-->
 			<i class="fa fa-tags"></i> <?php the_tags(); ?>
-			<div class="post-comments-badge">
+			<div class="post-comments-badge visible-md visible-lg-inline">
 								<!--			DISPLAY NUMBER OF COMMENTS-->
 				<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i><?php comments_number( 0, 1, '%'); ?></a>
 			</div>

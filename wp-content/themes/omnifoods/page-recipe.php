@@ -36,7 +36,7 @@
 		<div id="container-folio" class="relative">
 				<?php $loop = new Wp_Query(array('post_type' => 'myrecipe', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
 	<?php while($loop->have_posts()) : $loop->the_post(); $excerpt = get_the_excerpt(); ?>
-		<div class="box col-xs-6 col-md-4 col-sm-4 col-lg-4 <?php echo get_field( 'menu_filter' ); ?>">
+		<div class="box col-xs-6 col-md-3 col-sm-3 col-lg-3 <?php echo get_field( 'menu_filter' ); ?>">
 			<div class="thumbnail">
 				<?php the_post_thumbnail(); ?>
 				<h3><?php the_title(); ?></h3>
